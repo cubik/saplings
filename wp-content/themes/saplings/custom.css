@@ -456,6 +456,10 @@
     .footer-widgets .enews-widget input {
     	width: 100% !important;
     }
+
+    .footer-widgets .simple-social-icons ul li {
+	    margin: 0 3px 10px !important;
+    }
     .parallax-home .simple-social-icons ul li a, .parallax-home .simple-social-icons ul li a:hover, .simple-social-icons ul li a, .simple-social-icons ul li a:hover {
 	    padding: 15px !important;
 		font-size: 30px !important;
