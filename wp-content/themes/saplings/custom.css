@@ -5,8 +5,8 @@
     Author: Chris Ubik
     Author URI: http://www.chrisubik.com/
 
-    Version: 1.0.0
-    Last Update: 08/05/14
+    Version: 1.0.1
+    Last Update: December 23, 2014
 
     Tags: header-image, footer-widgets, simple-social-icons, social-links-home
 
@@ -234,7 +234,7 @@
 }
 
 .testimonial:before {
-    font-family: FontAwesome;
+    font-family: "fontawesome";
     content: ;
 }
 
@@ -246,34 +246,38 @@
 	font-weight: 700;
 }
 
-/* Style the two-column footer widgets
+/* Style the footer widgets
 --------------------------------------------- */
-.footer-widgets-1 {
-    float: left;
-    width: 50%;
+
+.footer-widgets .enews-widget input {
+	width: 33%;
 }
 
-.footer-widgets-1 .simple-social-icons {
+.footer-widgets .simple-social-icons {
     margin-top: 0;
 }
 
-.footer-widgets-2 {
-    float: right;
-    width: 50%;
-}
-
-/* Tweak footer eNews widget
---------------------------------------------- */
-.footer-widgets .enews-widget input {
-    width: 85%;
-}
-
-.footer-widgets .enews-widget input[type="submit"]  {
-    width: 30%;
-}
 
 .clear {
     clear: both;
+}
+
+/* Responsive Menu
+--------------------------------------------- */
+
+.responsive-menu-icon {
+	cursor: pointer;
+	display: none;
+	margin-bottom: -1px;
+	text-align: center;
+}
+
+.responsive-menu-icon::before {
+	content: "\f0c9";
+	display: inline-block;
+	font: normal 20px/1 "fontawesome";
+	margin: 0 auto;
+	padding: 10px;
 }
 
 /* Mobile Overrides */
@@ -297,6 +301,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+
+    .site-header .widget-area {
+	    width: inherit;
+    }
 
     .site-inner {
         margin-top: 30px;
@@ -333,10 +341,8 @@
         padding: 30px 0 20px;
     }
 
-    .footer-widgets-1,
-    .footer-widgets-2 {
-        width: 100%;
-        padding-bottom: 30px;
+    .footer-widgets .enews-widget input {
+	    width: 32% !important;
     }
 
     .parallax-home .simple-social-icons ul li a, .parallax-home .simple-social-icons ul li a,
@@ -349,5 +355,109 @@
     }
     .footer-widgets .enews-widget input[type="submit"] {
         width: 50%;
+    }
+
+    .fa-2x {
+	    font-size: 2.4rem;
+    }
+
+	/* Responsive Menu
+	--------------------------------------------- */
+    .genesis-nav-menu.responsive-menu > .menu-item > .sub-menu,
+	.genesis-nav-menu.responsive-menu {
+		display: none;
+	}
+
+	.genesis-nav-menu.responsive-menu .menu-item,
+	.responsive-menu-icon {
+		display: block;
+	}
+
+	.genesis-nav-menu.responsive-menu .menu-item {
+		margin: 0;
+	}
+
+	.genesis-nav-menu.responsive-menu .menu-item:hover {
+		position: static;
+	}
+
+	.genesis-nav-menu.responsive-menu .current-menu-item > a,
+	.genesis-nav-menu.responsive-menu .sub-menu .current-menu-item > a:hover,
+	.genesis-nav-menu.responsive-menu a,
+	.genesis-nav-menu.responsive-menu a:hover {
+		background: none;
+		line-height: 1;
+		padding: 16px 20px;
+	}
+	.nav-primary .genesis-nav-menu.responsive-menu .current-menu-item > a,
+	.nav-primary .genesis-nav-menu.responsive-menu .sub-menu .current-menu-item > a:hover,
+	.nav-primary .genesis-nav-menu.responsive-menu a,
+	.nav-primary .genesis-nav-menu.responsive-menu a:hover {
+		color: #fff;
+	}
+
+	.genesis-nav-menu.responsive-menu .menu-item-has-children {
+		cursor: pointer;
+	}
+
+	.genesis-nav-menu.responsive-menu .menu-item-has-children > a {
+		margin-right: 60px;
+	}
+
+	.genesis-nav-menu.responsive-menu > .menu-item-has-children:before {
+		content: "\f107";
+		float: right;
+		font: normal 16px/1 "fontawesome";
+		height: 16px;
+		padding: 16px 20px;
+		right: 0;
+		text-align: right;
+		z-index: 9999;
+	}
+	.nav-primary .genesis-nav-menu.responsive-menu > .menu-item-has-children:before {
+		color: #fff;
+	}
+
+	.genesis-nav-menu.responsive-menu .menu-open.menu-item-has-children:before {
+		content: "\f106";
+	}
+
+	.genesis-nav-menu.responsive-menu .sub-menu {
+		border: none;
+		left: auto;
+		opacity: 1;
+		padding-left: 25px;
+		position: relative;
+		-moz-transition:    opacity .4s ease-in-out;
+		-ms-transition:     opacity .4s ease-in-out;
+		-o-transition:      opacity .4s ease-in-out;
+		-webkit-transition: opacity .4s ease-in-out;
+		transition:         opacity .4s ease-in-out;
+		width: 100%;
+		z-index: 99;
+	}
+
+	.genesis-nav-menu.responsive-menu .sub-menu .sub-menu {
+		margin: 0;
+	}
+
+	.genesis-nav-menu.responsive-menu .sub-menu .current-menu-item > a:hover,
+	.genesis-nav-menu.responsive-menu .sub-menu li a,
+	.genesis-nav-menu.responsive-menu .sub-menu li a:hover {
+		background: none;
+		border: none;
+		padding: 12px 20px;
+		position: relative;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+    .footer-widgets .enews-widget input {
+    	width: 100% !important;
+    }
+    .parallax-home .simple-social-icons ul li a, .parallax-home .simple-social-icons ul li a:hover, .simple-social-icons ul li a, .simple-social-icons ul li a:hover {
+	    padding: 15px !important;
+		font-size: 30px !important;
     }
 }
