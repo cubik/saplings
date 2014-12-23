@@ -18,8 +18,8 @@ function parallax_customizer(){
 include_once( get_stylesheet_directory() . '/lib/output.php' );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'Parallax Pro Theme' );
-define( 'CHILD_THEME_URL', 'http://my.studiopress.com/themes/parallax/' );
+define( 'CHILD_THEME_NAME', 'Saplings Child theme' );
+define( 'CHILD_THEME_URL', 'http://www.chrisubik.com' );
 define( 'CHILD_THEME_VERSION', '1.2' );
 
 //* Enqueue scripts and styles
@@ -35,7 +35,6 @@ add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
 function enqueue_font_awesome() {
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' );
 }
-
 
 //* Add HTML5 markup structure
 add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
@@ -68,10 +67,10 @@ genesis_unregister_layout( 'sidebar-sidebar-content' );
 
 //* Add support for additional color styles
 add_theme_support( 'genesis-style-selector', array(
-	'parallax-pro-blue'   => __( 'Parallax Pro Blue', 'parallax' ),
-	'parallax-pro-green'  => __( 'Parallax Pro Green', 'parallax' ),
-	'parallax-pro-orange' => __( 'Parallax Pro Orange', 'parallax' ),
-	'parallax-pro-pink'   => __( 'Parallax Pro Pink', 'parallax' ),
+	'parallax-pro-blue'   => __( 'Parallax Pro Blue', 'saplings' ),
+	'parallax-pro-green'  => __( 'Parallax Pro Green', 'saplings' ),
+	'parallax-pro-orange' => __( 'Parallax Pro Orange', 'saplings' ),
+	'parallax-pro-pink'   => __( 'Parallax Pro Pink', 'saplings' ),
 ) );
 
 //* Unregister secondary sidebar
@@ -108,7 +107,7 @@ function parallax_comments_gravatar( $args ) {
 }
 
 //* Add support for 2-column footer widgets
-add_theme_support( 'genesis-footer-widgets', 2 );
+add_theme_support( 'genesis-footer-widgets', 1 );
 
 //* Add support for after entry widget
 add_theme_support( 'genesis-after-entry-widget-area' );
@@ -121,42 +120,42 @@ add_action( 'genesis_after_entry', 'genesis_after_entry_widget_area', 5 );
 genesis_register_sidebar( array(
 	'id'          => 'home-section-1',
 	'name'        => __( 'Home Section 1', 'parallax' ),
-	'description' => __( 'This is the home section 1 section.', 'parallax' ),
+	'description' => __( 'This is the home section 1 section.', 'saplings' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'home-section-2',
 	'name'        => __( 'Home Section 2', 'parallax' ),
-	'description' => __( 'This is the home section 2 section.', 'parallax' ),
+	'description' => __( 'This is the home section 2 section.', 'saplings' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'home-section-3',
 	'name'        => __( 'Home Section 3', 'parallax' ),
-	'description' => __( 'This is the home section 3 section.', 'parallax' ),
+	'description' => __( 'This is the home section 3 section.', 'saplings' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'home-section-4',
 	'name'        => __( 'Home Section 4', 'parallax' ),
-	'description' => __( 'This is the home section 4 section.', 'parallax' ),
+	'description' => __( 'This is the home section 4 section.', 'saplings' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'home-section-5',
 	'name'        => __( 'Home Section 5', 'parallax' ),
-	'description' => __( 'This is the home section 5 section.', 'parallax' ),
+	'description' => __( 'This is the home section 5 section.', 'saplings' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'home-section-6',
 	'name'        => __( 'Home Section 6', 'parallax' ),
-	'description' => __( 'This is the home section 6 section.', 'parallax' ),
+	'description' => __( 'This is the home section 6 section.', 'saplings' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'home-section-7',
 	'name'        => __( 'Home Section 7', 'parallax' ),
-	'description' => __( 'This is the home section 7 section.', 'parallax' ),
+	'description' => __( 'This is the home section 7 section.', 'saplings' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'home-section-8',
 	'name'        => __( 'Home Section 8', 'parallax' ),
-	'description' => __( 'This is the home section 8 section.', 'parallax' ),
+	'description' => __( 'This is the home section 8 section.', 'saplings' ),
 ) );
 
 //* Chris Ubik's customizations
