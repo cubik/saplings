@@ -298,6 +298,10 @@
 		-moz-background-size:    auto;
 		background-size:         auto;
 	}
+
+	.footer-widgets .enews-widget input {
+	    width: 32% !important;
+    }
 }
 
 @media only screen and (max-width: 768px) {
