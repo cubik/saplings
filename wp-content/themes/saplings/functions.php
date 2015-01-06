@@ -25,7 +25,7 @@ define( 'CHILD_THEME_VERSION', '1.2' );
 //* Enqueue scripts and styles
 add_action( 'wp_enqueue_scripts', 'parallax_enqueue_scripts_styles' );
 function parallax_enqueue_scripts_styles() {
-	wp_enqueue_script( 'parallax-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
+  wp_enqueue_script( 'parallax-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'parallax-google-fonts', '//fonts.googleapis.com/css?family=Montserrat|Sorts+Mill+Goudy', array(), CHILD_THEME_VERSION );
 }
@@ -180,15 +180,15 @@ genesis_register_sidebar( array(
     unregister_sidebar( 'sidebar' );
 
 //* Use jQuery Google API
-    function cu_modify_jquery() {
-    	if (!is_admin()) {
-    		//* comment out the next two lines to load the local copy of jQuery
-    		wp_deregister_script('jquery');
-    		wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', '1.11.0', '', true );
-    		wp_enqueue_script('jquery');
-    	}
-    }
-    add_action('init', 'cu_modify_jquery');
+  function cu_modify_jquery() {
+  	if (!is_admin()) {
+  		//* comment out the next two lines to load the local copy of jQuery
+  		wp_deregister_script('jquery');
+  		wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', '1.11.0', '', true );
+  		wp_enqueue_script('jquery');
+  	}
+  }
+  add_action('init', 'cu_modify_jquery');
 
 //* Customize the credits
 add_filter( 'genesis_footer_creds_text', 'sp_footer_creds_text' );
@@ -203,26 +203,26 @@ function sp_footer_creds_text() {
 
 /* Change the login page */
 function sp_login_logo() { ?>
-    <style type="text/css">
-        body.login div#login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/P_cafe_logo_02@2x.png);
-            background-size: 125px auto;
-            height: 125px;
-            width: 320px;
-			/* padding-bottom: 30px; */
-        }
-    </style>
-    <?php }
-    add_action( 'login_enqueue_scripts', 'sp_login_logo' );
+  <style type="text/css">
+    body.login div#login h1 a {
+      background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/P_cafe_logo_02@2x.png);
+      background-size: 125px auto;
+      height: 125px;
+      width: 320px;
+    }
+  </style>
+<?php }
+
+add_action( 'login_enqueue_scripts', 'sp_login_logo' );
 
 // Replace logo URL
     function sp_login_logo_url() {
-            return home_url();
-        }
+      return home_url();
+    }
     add_filter( 'login_headerurl', 'sp_login_logo_url' );
 
     function sp_login_logo_url_title() {
-        return 'Saplings, Inc.';
+      return 'Saplings, Inc.';
     }
     add_filter( 'login_headertitle', 'sp_login_logo_url_title' );
 
@@ -230,92 +230,69 @@ function sp_login_logo() { ?>
 add_filter( 'simple_social_default_profiles', 'custom_simple_social_default_profiles' );
 function custom_simple_social_default_profiles() {
 	$glyphs = array(
-			'dribbble'		=> '&#xf17d;',
-			'email'			=> '&#xf0e0;',
-			'facebook'		=> '&#xf09a;',
-			'flickr'		=> '&#xf16e;',
-/* 			'github'		=> '&#xf09b;', */
-			'gplus'			=> '&#xf0d5;',
-			'instagram' 	=> '&#xf16d;',
-			'linkedin'		=> '&#xf0e1;',
-			'pinterest'		=> '&#xf0d2;',
-/*
-			'rss'			=> '&#xf09e;',
-			'stumbleupon'	=> '&#xf1a4;',
-*/
-			'tumblr'		=> '&#xf173;',
-			'twitter'		=> '&#xf099;',
-			'vimeo'			=> '&#xf194;',
-			'youtube'		=> '&#xf167;',
+		'dribbble'		=> '&#xf17d;',
+		'email'			=> '&#xf0e0;',
+		'facebook'		=> '&#xf09a;',
+		'flickr'		=> '&#xf16e;',
+		'gplus'			=> '&#xf0d5;',
+		'instagram' 	=> '&#xf16d;',
+		'linkedin'		=> '&#xf0e1;',
+		'pinterest'		=> '&#xf0d2;',
+		'tumblr'		=> '&#xf173;',
+		'twitter'		=> '&#xf099;',
+		'vimeo'			=> '&#xf194;',
+		'youtube'		=> '&#xf167;',
 		);
 
 	$profiles = array(
-			'dribbble' => array(
-				'label'   => __( 'Dribbble URI', 'ssiw' ),
-				'pattern' => '<li class="social-dribbble"><a href="%s" %s>' . $glyphs['dribbble'] . '</a></li>',
-			),
-			'email' => array(
-				'label'   => __( 'Email URI', 'ssiw' ),
-				'pattern' => '<li class="social-email"><a href="%s" %s>' . $glyphs['email'] . '</a></li>',
-			),
-			'linkedin' => array(
-				'label'   => __( 'Linkedin URI', 'ssiw' ),
-				'pattern' => '<li class="social-linkedin"><a href="%s" %s>' . $glyphs['linkedin'] . '</a></li>',
-			),
-			'twitter' => array(
-				'label'   => __( 'Twitter URI', 'ssiw' ),
-				'pattern' => '<li class="social-twitter"><a href="%s" %s>' . $glyphs['twitter'] . '</a></li>',
-			),
-			'gplus' => array(
-				'label'   => __( 'Google+ URI', 'ssiw' ),
-				'pattern' => '<li class="social-gplus"><a href="%s" %s>' . $glyphs['gplus'] . '</a></li>',
-			),
-			'flickr' => array(
-				'label'   => __( 'Flickr URI', 'ssiw' ),
-				'pattern' => '<li class="social-flickr"><a href="%s" %s>' . $glyphs['flickr'] . '</a></li>',
-			),
-			'instagram' => array(
-				'label'   => __( 'Instagram URI', 'ssiw' ),
-				'pattern' => '<li class="social-instagram"><a href="%s" %s>' . $glyphs['instagram'] . '</a></li>',
-			),
-			'facebook' => array(
-				'label'   => __( 'Facebook URI', 'ssiw' ),
-				'pattern' => '<li class="social-facebook"><a href="%s" %s>' . $glyphs['facebook'] . '</a></li>',
-			),
-/*
-			'github' => array(
-				'label'   => __( 'GitHub URI', 'ssiw' ),
-				'pattern' => '<li class="social-github"><a href="%s" %s>' . $glyphs['github'] . '</a></li>',
-			),
-*/
-			'pinterest' => array(
-				'label'   => __( 'Pinterest URI', 'ssiw' ),
-				'pattern' => '<li class="social-pinterest"><a href="%s" %s>' . $glyphs['pinterest'] . '</a></li>',
-			),
-/*
-			'rss' => array(
-				'label'   => __( 'RSS URI', 'ssiw' ),
-				'pattern' => '<li class="social-rss"><a href="%s" %s>' . $glyphs['rss'] . '</a></li>',
-			),
-*/
-/*
-			'stumbleupon' => array(
-				'label'   => __( 'StumbleUpon URI', 'ssiw' ),
-				'pattern' => '<li class="social-stumbleupon"><a href="%s" %s>' . $glyphs['stumbleupon'] . '</a></li>',
-			),
-*/
-			'tumblr' => array(
-				'label'   => __( 'Tumblr URI', 'ssiw' ),
-				'pattern' => '<li class="social-tumblr"><a href="%s" %s>' . $glyphs['tumblr'] . '</a></li>',
-			),
-			'vimeo' => array(
-				'label'   => __( 'Vimeo URI', 'ssiw' ),
-				'pattern' => '<li class="social-vimeo"><a href="%s" %s>' . $glyphs['vimeo'] . '</a></li>',
-			),
-			'youtube' => array(
-				'label'   => __( 'YouTube URI', 'ssiw' ),
-				'pattern' => '<li class="social-youtube"><a href="%s" %s>' . $glyphs['youtube'] . '</a></li>',
-			),
-		);
+		'dribbble' => array(
+			'label'   => __( 'Dribbble URI', 'ssiw' ),
+			'pattern' => '<li class="social-dribbble"><a href="%s" %s>' . $glyphs['dribbble'] . '</a></li>',
+		),
+		'email' => array(
+			'label'   => __( 'Email URI', 'ssiw' ),
+			'pattern' => '<li class="social-email"><a href="%s" %s>' . $glyphs['email'] . '</a></li>',
+		),
+		'linkedin' => array(
+			'label'   => __( 'Linkedin URI', 'ssiw' ),
+			'pattern' => '<li class="social-linkedin"><a href="%s" %s>' . $glyphs['linkedin'] . '</a></li>',
+		),
+		'twitter' => array(
+			'label'   => __( 'Twitter URI', 'ssiw' ),
+			'pattern' => '<li class="social-twitter"><a href="%s" %s>' . $glyphs['twitter'] . '</a></li>',
+		),
+		'gplus' => array(
+			'label'   => __( 'Google+ URI', 'ssiw' ),
+			'pattern' => '<li class="social-gplus"><a href="%s" %s>' . $glyphs['gplus'] . '</a></li>',
+		),
+		'flickr' => array(
+			'label'   => __( 'Flickr URI', 'ssiw' ),
+			'pattern' => '<li class="social-flickr"><a href="%s" %s>' . $glyphs['flickr'] . '</a></li>',
+		),
+		'instagram' => array(
+			'label'   => __( 'Instagram URI', 'ssiw' ),
+			'pattern' => '<li class="social-instagram"><a href="%s" %s>' . $glyphs['instagram'] . '</a></li>',
+		),
+		'facebook' => array(
+			'label'   => __( 'Facebook URI', 'ssiw' ),
+			'pattern' => '<li class="social-facebook"><a href="%s" %s>' . $glyphs['facebook'] . '</a></li>',
+		),
+		'pinterest' => array(
+			'label'   => __( 'Pinterest URI', 'ssiw' ),
+			'pattern' => '<li class="social-pinterest"><a href="%s" %s>' . $glyphs['pinterest'] . '</a></li>',
+		),
+		'tumblr' => array(
+			'label'   => __( 'Tumblr URI', 'ssiw' ),
+			'pattern' => '<li class="social-tumblr"><a href="%s" %s>' . $glyphs['tumblr'] . '</a></li>',
+		),
+		'vimeo' => array(
+			'label'   => __( 'Vimeo URI', 'ssiw' ),
+			'pattern' => '<li class="social-vimeo"><a href="%s" %s>' . $glyphs['vimeo'] . '</a></li>',
+		),
+		'youtube' => array(
+			'label'   => __( 'YouTube URI', 'ssiw' ),
+			'pattern' => '<li class="social-youtube"><a href="%s" %s>' . $glyphs['youtube'] . '</a></li>',
+		),
+  );
 	return $profiles;
 }
