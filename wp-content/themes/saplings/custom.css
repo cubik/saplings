@@ -6,7 +6,7 @@
     Author URI: http://www.chrisubik.com/
 
     Version: 1.0.1
-    Last Update: December 23, 2014
+    Last Update: January 6, 2015
 
     Tags: header-image, footer-widgets, simple-social-icons, social-links-home
 
@@ -39,28 +39,28 @@
 #text-2 .textwidget p, #text-4 .textwidget p, #text-5 .textwidget p,
 #text-2 .textwidget h2, #text-4 .textwidget h2, #text-5 .textwidget h2,
 #text-2 .textwidget h3, #text-4 .textwidget h3, #text-5 .textwidget h3 {
-    text-shadow: 2px 1px 2px #494949;
+  text-shadow: 2px 1px 2px #494949;
 }
 
 /* Tighten up the white space per DZ
 --------------------------------------------- */
 .site-inner {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .breadcrumb {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .entry-header:after {
-    padding-bottom: 10px;
-    margin-bottom: 30px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 /* Make FontAwesome Circle Green
 --------------------------------------------- */
 .fa-circle {
-    color: #35c379;
+  color: #35c379;
 }
 
 /* Simple Social Icons
@@ -225,17 +225,17 @@
 /* Style the testimonials
 --------------------------------------------- */
 .testimonial {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .testimonial i {
-    padding-right: 20px;
-    color: #35c379;
+  padding-right: 20px;
+  color: #35c379;
 }
 
 .testimonial:before {
-    font-family: "fontawesome";
-    content: ;
+  font-family: "fontawesome";
+  content: ;
 }
 
 /* Style Promotional text
@@ -254,12 +254,12 @@
 }
 
 .footer-widgets .simple-social-icons {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 
 .clear {
-    clear: both;
+  clear: both;
 }
 
 /* Responsive Menu
@@ -300,70 +300,70 @@
 	}
 
 	.footer-widgets .enews-widget input {
-	    width: 32% !important;
-    }
+    width: 32% !important;
+  }
 }
 
 @media only screen and (max-width: 768px) {
 
-    .site-header .widget-area {
-	    width: inherit;
-    }
+  .site-header .widget-area {
+    width: inherit;
+  }
 
-    .site-inner {
-        margin-top: 30px;
-    }
+  .site-inner {
+    margin-top: 30px;
+  }
 
-    .home-even, .home-odd {
-        padding: 30px 0 40px;
-    }
+  .home-even, .home-odd {
+    padding: 30px 0 40px;
+  }
 
-    .home-even .widget-title,
-    .home-odd .widget-title {
-        margin-bottom: 20px;
-    }
+  .home-even .widget-title,
+  .home-odd .widget-title {
+    margin-bottom: 20px;
+  }
 
-    .home-even a.button, .home-odd a.button {
-        margin-top: 0;
-    }
+  .home-even a.button, .home-odd a.button {
+    margin-top: 0;
+  }
 
-    .home-section-5 h2,
-    .home-section-5 h3 {
-        font-size: 20px;
-    }
+  .home-section-5 h2,
+  .home-section-5 h3 {
+    font-size: 20px;
+  }
 
-    .home-section-5 p {
-	    font-size: 22px;
-    }
+  .home-section-5 p {
+    font-size: 22px;
+  }
 
-    .wp-caption.alignright {
-        float: center;
-        margin: auto;
-        padding-bottom: 20px;
-    }
-    .footer-widgets {
-        padding: 30px 0 20px;
-    }
+  .wp-caption.alignright {
+    float: center;
+    margin: auto;
+    padding-bottom: 20px;
+  }
+  .footer-widgets {
+    padding: 30px 0 20px;
+  }
 
-    .footer-widgets .enews-widget input {
-	    width: 32% !important;
-    }
+  .footer-widgets .enews-widget input {
+    width: 32% !important;
+  }
 
-    .parallax-home .simple-social-icons ul li a, .parallax-home .simple-social-icons ul li a,
-    .parallax-home .simple-social-icons ul li a, .parallax-home .simple-social-icons ul li a:hover {
-        padding: 10px;
-    }
+  .parallax-home .simple-social-icons ul li a, .parallax-home .simple-social-icons ul li a,
+  .parallax-home .simple-social-icons ul li a, .parallax-home .simple-social-icons ul li a:hover {
+    padding: 10px;
+  }
 
-    .parallax-home .simple-social-icons ul li {
-        margin: 0 10px 20px !important;
-    }
-    .footer-widgets .enews-widget input[type="submit"] {
-        width: 50%;
-    }
+  .parallax-home .simple-social-icons ul li {
+    margin: 0 10px 20px !important;
+  }
+  .footer-widgets .enews-widget input[type="submit"] {
+    width: 50%;
+  }
 
-    .fa-2x {
-	    font-size: 2.4rem;
-    }
+  .fa-2x {
+    font-size: 2.4rem;
+  }
 
 	/* Responsive Menu
 	--------------------------------------------- */
@@ -457,15 +457,15 @@
 }
 
 @media only screen and (max-width: 480px) {
-    .footer-widgets .enews-widget input {
-    	width: 100% !important;
-    }
+  .footer-widgets .enews-widget input {
+  	width: 100% !important;
+  }
 
-    .footer-widgets .simple-social-icons ul li {
-	    margin: 0 3px 10px !important;
-    }
-    .parallax-home .simple-social-icons ul li a, .parallax-home .simple-social-icons ul li a:hover, .simple-social-icons ul li a, .simple-social-icons ul li a:hover {
-	    padding: 15px !important;
-		font-size: 30px !important;
-    }
+  .footer-widgets .simple-social-icons ul li {
+    margin: 0 3px 10px !important;
+  }
+  .parallax-home .simple-social-icons ul li a, .parallax-home .simple-social-icons ul li a:hover, .simple-social-icons ul li a, .simple-social-icons ul li a:hover {
+    padding: 15px !important;
+    font-size: 30px !important;
+  }
 }
